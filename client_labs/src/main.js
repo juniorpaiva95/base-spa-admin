@@ -7,6 +7,8 @@ import Multiselect from 'vue-multiselect'
 import App from './App'
 
 import LoginPage from './pages/LoginPage'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 
 import Logger from './plugins/Logger'
 
@@ -21,7 +23,10 @@ Vue.component('app', App)
 const routes = [
   {path: '/', component: LoginPage, name: 'home'},
 
-  {path: '/admin', component: require('./pages/admin/dashboard'), name: 'dashboard', meta: { requiresAuth: true }}
+  {path: '/admin', component: require('./pages/admin/dashboard'), name: 'dashboard', meta: { requiresAuth: true }},
+  {path: '/forgot-password', component: ForgotPassword, name: 'forgot-password'},
+  {path: '/reset-password/:token', component: ResetPassword, name: 'reset-password'},
+  {path: '*', component: require('./pages/errors/notfound')}
 ]
 
 const router = new VueRouter({

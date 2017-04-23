@@ -1,7 +1,10 @@
 <script>
   import {mapState} from 'vuex'
-
+  import VsFooter from './components/Footer'
   export default {
+    components: {
+      VsFooter
+    },
     computed: {
       ...mapState({
         userStore: state => state.userStore
@@ -39,7 +42,7 @@
       </ul>
     </div>
 
-    <div class="navbar-collapse collapse" id="navbar-mobile">
+    <div v-if="userStore.authUser" class="navbar-collapse collapse" id="navbar-mobile">
       <ul class="nav navbar-nav">
         <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
       </ul>
@@ -170,9 +173,11 @@
   </div>
   <!-- /main navbar -->
     <router-view></router-view>
+    <vs-footer></vs-footer>
   </div>
 </template>
 
 <style lang="sass">
   //@import "~/static/assets/css/icons/icomoon/styles.css";
+  @import '~/static/assets/css/icons/icomoon/styles.css'
 </style>

@@ -6,10 +6,7 @@
   export default {
     created () {
       this.$nextTick(function () {
-        // $.getScript('/static/assets/js/core/app.js')
-        // $.getScript('/static/assets/js/pages/dashboard.js')
         $.getScript('/static/assets/js/plugins/forms/styling/uniform.min.js')
-        // $.getScript('/static/assets/js/core/app.js')
         $.getScript('/static/assets/js/pages/login.js')
         $('body').addClass('login-container')
       })
@@ -107,7 +104,7 @@
                   </div>
 
                   <div class="col-sm-6 text-right">
-                    <a href="login_password_recover.html">Forgot password?</a>
+                    <router-link :to="{ name: 'forgot-password' }">Esqueci a senha</router-link>
                   </div>
                 </div>
               </div>
@@ -130,13 +127,6 @@
             </div>
           </form>
           <!-- /advanced login -->
-
-
-          <!-- Footer -->
-          <div class="footer text-muted text-center">
-            &copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
-          </div>
-          <!-- /footer -->
 
         </div>
         <!-- /content area -->

@@ -1,38 +1,62 @@
 <template>
-  <div class="ForgotPassword__Wrapper">
-    <section class="login">
-      <div class="row">
-        <div class="col-md-6 col-md-push-3">
-          <div class="panel panel-default">
-            <div class="panel-heading"><strong>Forgot password</strong></div>
-            <div class="panel-body">
-              <form v-on:submit.prevent="handleForgotPasswordSubmit()">
-                <div class="form-group">
-                  <label>Email address</label>
-                  <input
-                    class="form-control"
-                    placeholder="Enter your email address"
-                    type="text"
-                    v-model="email"
-                  >
+<div class="">
+    <!-- Page container -->
+    <div class="page-container">
+
+      <!-- Page content -->
+      <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+          <!-- Content area -->
+          <div class="content">
+
+            <!-- Password recovery -->
+            <form v-on:submit.prevent="handleForgotPasswordSubmit()">
+              <div class="panel panel-body login-form">
+                <div class="text-center">
+                  <div class="icon-object border-warning text-warning"><i class="icon-spinner11"></i></div>
+                  <h5 class="content-group">Password recovery <small class="display-block">We'll send you instructions in email</small></h5>
                 </div>
-                <button class="btn btn-primary">Send email</button>
-              </form>
-            </div>
+
+                <div class="form-group has-feedback">
+                  <input type="email" class="form-control" placeholder="Your email">
+                  <div class="form-control-feedback">
+                    <i class="icon-mail5 text-muted"></i>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn bg-blue btn-block">Reset password <i class="icon-arrow-right14 position-right"></i></button>
+              </div>
+            </form>
+            <!-- /password recovery -->
+
           </div>
+          <!-- /content area -->
+
         </div>
+        <!-- /main content -->
+
       </div>
-    </section>
+      <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
   </div>
 </template>
 
 <script>
   import {forgotPassword} from './../config'
+  import $ from 'jquery'
   export default {
     data () {
       return {
         email: ''
       }
+    },
+    created () {
+      $('body').addClass('login-container')
     },
     methods: {
       handleForgotPasswordSubmit () {
@@ -52,7 +76,6 @@
   }
 </script>
 
-<style lang="sass">
-  .ForgotPassword__Wrapper
-    margin-top: 50px
+<style lang="sass" scoped>
+  
 </style>
