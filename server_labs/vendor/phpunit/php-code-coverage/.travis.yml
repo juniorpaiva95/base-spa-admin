@@ -1,28 +1,21 @@
 language: php
 
 php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - nightly
-
-env:
-  matrix:
-    - DRIVER="xdebug"
-    - DRIVER="phpdbg"
+    - 5.6
+    - 7.0
+    - nightly
 
 sudo: false
 
 before_install:
-  - composer self-update
-  - composer clear-cache
+    - composer self-update
 
 install:
-  - travis_retry composer update --no-interaction --no-ansi --no-progress --no-suggest --optimize-autoloader --prefer-stable
+    - travis_retry composer install --no-interaction --prefer-source
 
 script:
-  - if [[ "$DRIVER" = 'phpdbg' ]]; then phpdbg -qrr vendor/bin/phpunit; fi
-  - if [[ "$DRIVER" = 'xdebug' ]]; then vendor/bin/phpunit; fi
+
+    - vendor/bin/phpunit --configuration build
 
 notifications:
   email: false

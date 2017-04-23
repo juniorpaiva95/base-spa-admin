@@ -1,31 +1,9 @@
-@import 'variables';
-//@import 'node_modules/bootstrap/scss/bootstrap';
-@import 'node_modules/sweetalert2/src/sweetalert2';
 
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
-//@import 'elements/nav';
-//@import 'elements/card';
-//@import 'elements/forms';
+// Variables
+@import "variables";
 
-.navbar {
-  border: 1px solid #d3e0e9;
-  background-color: darken(#fff, 3%);
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: opacity .2s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity .15s
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0
-}
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

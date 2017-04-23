@@ -16,7 +16,6 @@ use Symfony\Component\HttpKernel\Profiler\FileProfilerStorage;
 use Symfony\Component\HttpKernel\Profiler\Profiler;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\VarDumper\Cloner\Data;
 
 class ProfilerTest extends \PHPUnit_Framework_TestCase
 {
@@ -36,7 +35,7 @@ class ProfilerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame(204, $profile->getStatusCode());
         $this->assertSame('GET', $profile->getMethod());
-        $this->assertInstanceOf(Data::class, $profiler->get('request')->getRequestQuery()->all()['foo']);
+        $this->assertEquals(array('foo' => 'bar'), $profiler->get('request')->getRequestQuery()->all());
     }
 
     public function testFindWorksWithDates()

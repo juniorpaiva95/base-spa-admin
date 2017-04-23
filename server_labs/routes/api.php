@@ -2,31 +2,24 @@
 
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::post('forgot-password', 'UserController@forgotPassword');
+Route::post('reset-password', 'UserController@resetPassword');
 
-Route::group(['middleware' => 'auth:api'], function () {
-    Route::post('logout', 'Auth\LoginController@logout');
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:api');
 
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
+    Route::get('user-list', 'UserController@getUserList');
 
-    Route::patch('settings/profile', 'SettingsController@updateProfile');
-    Route::patch('settings/password', 'SettingsController@updatePassword');
-});
+    /*Chat urls*/
+    Route::post('get-user-conversation', 'ChatController@getUserConversationById');
+    Route::post('save-chat', 'ChatController@saveUserChat');
 
-Route::group(['middleware' => 'guest:api'], function () {
-    Route::post('login', 'Auth\LoginController@login');
-    Route::post('register', 'Auth\RegisterController@register');
-    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+    /*Private Message urls*/
+    Route::post('get-private-message-notifications', 'PrivateMessageController@getUserNotifications');
+    Route::post('get-private-messages', 'PrivateMessageController@getPrimateMessages');
+    Route::post('get-private-message', 'PrivateMessageController@getPrivateMessageById');
+    Route::post('get-private-messages-sent', 'PrivateMessageController@getPrivateMessageSent');
+    Route::post('send-private-message', 'PrivateMessageController@sendPrivateMessage');
 });

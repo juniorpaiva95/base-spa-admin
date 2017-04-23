@@ -2,13 +2,13 @@
 
 namespace App;
 
-use Tymon\JWTAuth\Contracts\JWTSubject;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable implements JWTSubject
+class User extends Authenticatable
 {
-    use Notifiable;
+    use HasApiTokens, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -29,18 +29,10 @@ class User extends Authenticatable implements JWTSubject
     ];
 
     /**
-     * @return int
+     * Relation with Token and User
      */
-    public function getJWTIdentifier()
+    public function token()
     {
-        return $this->getKey();
-    }
-
-    /**
-     * @return array
-     */
-    public function getJWTCustomClaims()
-    {
-        return [];
+        return $this->hasMany('App\Token');
     }
 }

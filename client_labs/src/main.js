@@ -30,6 +30,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  // if (to.name === 'home' && JSON.parse(window.localStorage.getItem('authUser'))) {
+  //   return false
+  // }
   if (to.meta.requiresAuth) {
     const authUser = JSON.parse(window.localStorage.getItem('authUser'))
     if (authUser && authUser.access_token) {
