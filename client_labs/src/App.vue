@@ -160,7 +160,7 @@
         <li class="dropdown dropdown-user">
           <a class="dropdown-toggle" data-toggle="dropdown">
             <img src="/static/assets/images/demo/users/face11.jpg" alt="">
-            <span>Victoria</span>
+            <span>{{ userStore.authUser.name }}</span>
             <i class="caret"></i>
           </a>
 
@@ -177,7 +177,10 @@
   </div>
 </template>
 
-<style lang="sass">
-  //@import "~/static/assets/css/icons/icomoon/styles.css";
-  @import '~/static/assets/css/icons/icomoon/styles.css'
+<style lang="scss">
+  @import '~/static/assets/css/icons/icomoon/styles.css';
+  //@import '~/static/assets/css/icons/fontawesome/styles.min.css';
+  body {
+    font-family: 'Rajdhani';
+  }
 </style>
