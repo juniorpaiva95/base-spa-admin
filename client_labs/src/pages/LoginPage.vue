@@ -19,7 +19,7 @@
     data () {
       return {
         login: {
-          email: 'amitavroy@gmail.com',
+          email: 'joselito.junior@esfera5.com.br',
           password: 'password'
         }
       }
@@ -145,5 +145,5 @@
 </template>
 
 <style lang="sass">
-  
+
 </style>
