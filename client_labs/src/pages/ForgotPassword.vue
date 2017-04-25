@@ -1,5 +1,5 @@
 <template>
-<div class="">
+  <div class="">
     <!-- Page container -->
     <div class="page-container">
 
@@ -47,35 +47,38 @@
 </template>
 
 <script>
-  import {forgotPassword} from './../config'
-  import $ from 'jquery'
-  export default {
-    data () {
-      return {
-        email: ''
+import {forgotPassword} from './../config'
+import $ from 'jquery'
+export default {
+  metaInfo: {
+    titleTemplate: '%s - Recuperar Senha'
+  },
+  data () {
+    return {
+      email: ''
+    }
+  },
+  created () {
+    $('body').addClass('login-container')
+  },
+  methods: {
+    handleForgotPasswordSubmit () {
+      var postData = {
+        email: this.email,
+        url: 'http://localhost:8080'
       }
-    },
-    created () {
-      $('body').addClass('login-container')
-    },
-    methods: {
-      handleForgotPasswordSubmit () {
-        var postData = {
-          email: this.email,
-          url: 'http://localhost:8080'
-        }
-        this.$http.post(forgotPassword, postData).then(response => {
-          console.log('response', response)
-          this.$router.push({name: 'home'})
-        }).catch(response => {
-          console.log('response', response)
-          window.alert(response.body.data)
-        })
-      }
+      this.$http.post(forgotPassword, postData).then(response => {
+        console.log('response', response)
+        this.$router.push({name: 'home'})
+      }).catch(response => {
+        console.log('response', response)
+        window.alert(response.body.data)
+      })
     }
   }
+}
 </script>
 
-<style lang="sass" scoped>
-  
-</style>
+  <style lang="sass" scoped>
+
+    </style>

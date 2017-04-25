@@ -10,7 +10,7 @@
 
 			<!-- Main content -->
 			<div class="content-wrapper">
-				
+
 				<!-- Page header -->
 				<div class="page-header page-header-default">
 					<div class="page-header-content">
@@ -54,7 +54,7 @@
 					</div>
 				</div>
 				<!-- /page header -->
-				
+
 
 				<!-- Content area -->
 				<div class="content">
@@ -264,7 +264,7 @@
 												</td>
 											</tr>
 										</tbody>
-									</table>	
+									</table>
 								</div>
 
 								<div class="table-responsive">
@@ -658,7 +658,7 @@
 												</td>
 											</tr>
 										</tbody>
-									</table>	
+									</table>
 								</div>
 
 								<div class="table-responsive">
@@ -1521,7 +1521,7 @@
 														Richard Vango
 														<span class="media-annotation pull-right">01:43</span>
 													</a>
-													
+
 													<span class="display-block text-muted">Amidst roadrunner distantly pompously where...</span>
 												</div>
 											</li>
@@ -1600,7 +1600,7 @@
 														Walther Laws
 														<span class="media-annotation pull-right">Tue, 03:29</span>
 													</a>
-													
+
 													<span class="display-block text-muted">Far affecting more leered unerringly dishonest...</span>
 												</div>
 											</li>
@@ -1679,7 +1679,7 @@
 														Sherilyn Mckee
 														<span class="media-annotation pull-right">Mon, 06:38</span>
 													</a>
-													
+
 													<span class="display-block text-muted">Less unicorn a however careless husky...</span>
 												</div>
 											</li>
@@ -1717,7 +1717,7 @@
 											<div class="media-left">
 												<a href="#" class="btn border-pink text-pink btn-flat btn-rounded btn-icon btn-xs"><i class="icon-statistics"></i></a>
 											</div>
-											
+
 											<div class="media-body">
 												Stats for July, 6: 1938 orders, $4220 revenue
 												<div class="media-annotation">2 hours ago</div>
@@ -1736,7 +1736,7 @@
 											<div class="media-left">
 												<a href="#" class="btn border-success text-success btn-flat btn-rounded btn-icon btn-xs"><i class="icon-checkmark3"></i></a>
 											</div>
-											
+
 											<div class="media-body">
 												Invoices <a href="#">#4732</a> and <a href="#">#4734</a> have been paid
 												<div class="media-annotation">Dec 18, 18:36</div>
@@ -1755,7 +1755,7 @@
 											<div class="media-left">
 												<a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-xs"><i class="icon-alignment-unalign"></i></a>
 											</div>
-											
+
 											<div class="media-body">
 												Affiliate commission for June has been paid
 												<div class="media-annotation">36 minutes ago</div>
@@ -1793,7 +1793,7 @@
 											<div class="media-left">
 												<a href="#" class="btn border-teal-400 text-teal btn-flat btn-rounded btn-icon btn-xs"><i class="icon-redo2"></i></a>
 											</div>
-											
+
 											<div class="media-body">
 												Invoice <a href="#">#4769</a> has been sent to <a href="#">Robert Smith</a>
 												<div class="media-annotation">Dec 12, 05:46</div>
@@ -1842,6 +1842,9 @@
 	import $ from 'jquery'
 	import SidebarNav from '../../components/Sidebar-nav'
 	export default {
+  metaInfo: {
+    titleTemplate: '%s - Dashboard'
+  },
 	  components: {
 	    SidebarNav
 	  },

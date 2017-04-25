@@ -4,6 +4,9 @@
   import {mapState} from 'vuex'
   import $ from 'jquery'
   export default {
+    metaInfo: {
+      titleTemplate: '%s - Login'
+    },
     created () {
       this.$nextTick(function () {
         $.getScript('/static/assets/js/plugins/forms/styling/uniform.min.js')

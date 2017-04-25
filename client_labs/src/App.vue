@@ -2,6 +2,9 @@
   import {mapState} from 'vuex'
   import VsFooter from './components/Footer'
   export default {
+    metaInfo: {
+      title: 'Acqio'
+    },
     components: {
       VsFooter
     },
@@ -72,7 +75,7 @@
             <span class="visible-xs-inline-block position-right">Messages</span>
             <span class="badge bg-warning-400">2</span>
           </a>
-          
+
           <div class="dropdown-menu dropdown-content width-350">
             <div class="dropdown-content-heading">
               Messages
@@ -145,7 +148,7 @@
                     <span class="text-semibold">Richard Vango</span>
                     <span class="media-annotation pull-right">Mon</span>
                   </a>
-                  
+
                   <span class="text-muted">Other travelling salesmen live a life of luxury...</span>
                 </div>
               </li>

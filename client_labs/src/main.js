@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import Meta from 'vue-meta'
 import store from './store'
 import Multiselect from 'vue-multiselect'
 // import VueSocketio from 'vue-socket.io'
@@ -15,6 +16,7 @@ import Logger from './plugins/Logger'
 Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(Logger, {loggin: true})
+Vue.use(Meta)
 // Vue.use(VueSocketio, 'http://localhost:8890')
 
 Vue.component('multiselect', Multiselect)
