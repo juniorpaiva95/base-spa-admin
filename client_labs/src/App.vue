@@ -182,6 +182,10 @@
 
 <style lang="scss">
   @import '~/static/assets/css/icons/icomoon/styles.css';
+  @import '~/static/assets/css/bootstrap.css';
+  @import '~/static/assets/css/colors.css';
+  @import '~/static/assets/css/core.css';
+  @import '~/static/assets/css/components.css';
   //@import '~/static/assets/css/icons/fontawesome/styles.min.css';
   body {
     font-family: 'Rajdhani';

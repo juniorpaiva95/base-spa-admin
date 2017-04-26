@@ -1,10 +1,15 @@
+// require('bootstrap-sass')
+window.jQuery = require('jquery')
+// require('../static/assets/js/plugins/loaders/pace.min.js')
+// require('../static/assets/js/core/libraries/bootstrap.min.js')
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import Meta from 'vue-meta'
 import store from './store'
 import Multiselect from 'vue-multiselect'
-// import VueSocketio from 'vue-socket.io'
+import VueSocketio from 'vue-socket.io'
 import App from './App'
 
 import LoginPage from './pages/LoginPage'
