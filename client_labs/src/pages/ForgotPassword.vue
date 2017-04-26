@@ -48,7 +48,6 @@
 
 <script>
 import {forgotPassword} from './../config'
-import $ from 'jquery'
 export default {
   metaInfo: {
     titleTemplate: '%s - Recuperar Senha'

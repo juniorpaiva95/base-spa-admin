@@ -1,8 +1,8 @@
 {
   "name": "client_labs",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Amitav Roy",
+  "description": "Vue Spa Admin",
+  "author": "Júnior Paiva",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -20,6 +20,7 @@
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
     "vue-socket.io": "^2.0.1",
+    "vuetable-2": "^1.6.0",
     "vuex": "^2.0.0"
   },
   "devDependencies": {

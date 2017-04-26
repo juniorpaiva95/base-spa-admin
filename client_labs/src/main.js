@@ -1,15 +1,12 @@
 // require('bootstrap-sass')
-window.jQuery = require('jquery')
-// require('../static/assets/js/plugins/loaders/pace.min.js')
-// require('../static/assets/js/core/libraries/bootstrap.min.js')
-
+require('./bootstrap.js')
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import Meta from 'vue-meta'
 import store from './store'
 import Multiselect from 'vue-multiselect'
-import VueSocketio from 'vue-socket.io'
+// import VueSocketio from 'vue-socket.io'
 import App from './App'
 
 import LoginPage from './pages/LoginPage'
@@ -17,6 +14,8 @@ import ForgotPassword from './pages/ForgotPassword'
 import ResetPassword from './pages/ResetPassword'
 
 import Logger from './plugins/Logger'
+
+import Clients from './components/Passport/Clients'
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
@@ -26,6 +25,7 @@ Vue.use(Meta)
 
 Vue.component('multiselect', Multiselect)
 Vue.component('app', App)
+Vue.component('clients', Clients)
 
 const routes = [
   {path: '/', component: LoginPage, name: 'home'},

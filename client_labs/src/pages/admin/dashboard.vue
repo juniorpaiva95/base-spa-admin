@@ -46,6 +46,11 @@
 				<!-- Content area -->
 				<div class="content">
 
+					<div class="row">
+						<div class="col-lg-12">
+							<clients></clients>
+						</div>
+					</div>
 					<!-- Main charts -->
 					<div class="row">
 						<div class="col-lg-7">

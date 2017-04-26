@@ -2,7 +2,6 @@
   import {loginUrl, getHeader, userUrl} from './../config'
   import {clientId, clientSecret} from './../env'
   import {mapState} from 'vuex'
-  import $ from 'jquery'
   export default {
     metaInfo: {
       titleTemplate: '%s - Login'
