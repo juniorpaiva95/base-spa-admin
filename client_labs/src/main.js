@@ -1,7 +1,9 @@
 require('./bootstrap.js')
 require('bootstrap-sass')
+
 // require('./teste.js')
 import Vue from 'vue'
+import VueEvents from 'vue-events'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import Meta from 'vue-meta'
@@ -18,10 +20,29 @@ import Logger from './plugins/Logger'
 
 import Clients from './components/Passport/Clients'
 
+import Vuetable from 'vuetable-2/src/components/Vuetable'
+// import VuetablePagination from 'vuetable-2/src/components/VuetablePagination'
+import VuetablePagination from 'vuetable-2/src/components/VuetablePaginationDropdown'
+import VuetablePaginationInfo from 'vuetable-2/src/components/VuetablePaginationInfo'
+import CustomActions from './components/Tables/CustomActions'
+import DetailRow from './components/Tables/DetailRow'
+import FilterBar from './components/Tables/FilterBar'
+
+  Vue.component('filter-bar', FilterBar)
+//
+// thirdly, register components to Vue
+//
+Vue.component('vuetable', Vuetable)
+Vue.component('vuetable-pagination', VuetablePagination)
+Vue.component('vuetable-pagination-info', VuetablePaginationInfo)
+Vue.component('custom-actions', CustomActions)
+Vue.component('my-detail-row', DetailRow)
+
 Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(Logger, {loggin: true})
 Vue.use(Meta)
+Vue.use(VueEvents)
 // Vue.use(VueSocketio, 'http://localhost:8890')
 
 Vue.component('multiselect', Multiselect)

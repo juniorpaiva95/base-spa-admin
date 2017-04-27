@@ -10,16 +10,21 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "accounting": "^0.4.1",
     "jquery": "^3.2.1",
     "lodash": "^4.16.4",
+    "moment": "^2.18.1",
     "node-sass": "^3.10.1",
     "pusher-js": "^3.2.3",
     "sass-loader": "^4.0.2",
+    "sweetalert2": "^6.6.2",
     "vue": "^2.0.1",
+    "vue-events": "^3.0.1",
     "vue-multiselect": "^2.0.0-beta.12",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
     "vue-socket.io": "^2.0.1",
+    "vuetable": "^1.5.12",
     "vuetable-2": "^1.6.0",
     "vuex": "^2.0.0"
   },
