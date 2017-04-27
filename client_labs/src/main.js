@@ -1,5 +1,6 @@
-// require('bootstrap-sass')
 require('./bootstrap.js')
+require('bootstrap-sass')
+// require('./teste.js')
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -26,10 +27,11 @@ Vue.use(Meta)
 Vue.component('multiselect', Multiselect)
 Vue.component('app', App)
 Vue.component('clients', Clients)
-
+Vue.component('sidebar-nav', require('./components/Sidebar-nav'))
+Vue.component('vs-footer', require('./components/Footer'))
 const routes = [
   {path: '/', component: LoginPage, name: 'home'},
-
+  {path: '/admin/boletos', component: require('./pages/admin/boletos'), name: 'admin.boletos', meta: { requiresAuth: true }},
   {path: '/admin', component: require('./pages/admin/dashboard'), name: 'dashboard', meta: { requiresAuth: true }},
   {path: '/forgot-password', component: ForgotPassword, name: 'forgot-password'},
   {path: '/reset-password/:token', component: ResetPassword, name: 'reset-password'},

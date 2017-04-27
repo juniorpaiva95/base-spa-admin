@@ -1,12 +1,11 @@
 <script>
   import {mapState} from 'vuex'
-  import VsFooter from './components/Footer'
   export default {
     metaInfo: {
       title: 'Acqio'
     },
     components: {
-      VsFooter
+      // VsFooter
     },
     computed: {
       ...mapState({
@@ -176,7 +175,7 @@
   </div>
   <!-- /main navbar -->
     <router-view></router-view>
-    <vs-footer></vs-footer>
+    <!-- <vs-footer></vs-footer> -->
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-	<div>
+  <div>
 		<!-- Page container -->
 	<div class="page-container">
 
@@ -45,19 +45,7 @@
 
 				<!-- Content area -->
 				<div class="content">
-
-					<div class="row">
-						<div class="col-lg-12">
-							<clients></clients>
-						</div>
-					</div>
-				</div>
-					<!-- /dashboard content -->
-
-
-					<!-- Footer -->
-					<vs-footer></vs-footer>
-					<!-- /footer -->
+          Boletos
 
 				</div>
 				<!-- /content area -->
@@ -75,23 +63,15 @@
 </template>
 
 <script>
-	import $ from 'jquery'
-	import SidebarNav from '../../components/Sidebar-nav'
-	export default {
-  metaInfo: {
-    titleTemplate: '%s - Dashboard'
-  },
-	  components: {
-	    SidebarNav
-	  },
-	  created () {
-	    $('body').removeClass('login-container')
-	    this.$nextTick(function () {
-	      $.getScript('/static/assets/js/core/app.js')
-	      // $.getScript('/static/assets/js/pages/dashboard.js')
-	    })
-	  }
-	}
+export default {
+  created() {
+    this.$nextTick(function () {
+      $.getScript('/static/assets/js/core/app.js')
+      // $.getScript('/static/assets/js/pages/dashboard.js')
+    })
+  }
+}
 </script>
 
-<style></style>
+<style lang="css">
+</style>
