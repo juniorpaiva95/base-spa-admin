@@ -2,6 +2,14 @@
 	// import $ from 'jquery'
 	import {mapState} from 'vuex'
 	export default{
+	  methods: {
+    active(val) {
+      if (this.$route.path === val) {
+        return true
+      }
+      return false
+    }
+  },
 	  computed: {
 	    ...mapState({
 	      userStore: state => state.userStore
@@ -48,11 +56,13 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="active"><router-link :to="{ name: 'dashboard' }"><i class="icon-home4"></i> <span>Dashboard</span></router-link></li>
+								<li :class="{ 'active' : active('/admin') }"><router-link :to="{ name: 'dashboard' }"><i class="icon-home4"></i> <span>Dashboard</span></router-link></li>
 								<!-- /main -->
 
 								<li class="navigation-header"><span>Administração</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li><router-link :to="{ name: 'admin.boletos' }"><i class="icon-barcode2"></i> <span>Boletos</span></router-link></li>
+								<li :class="{ 'active' : active('/admin/boletos') }">
+									<router-link :to="{ name: 'admin.boletos' }"><i class="icon-barcode2"></i> <span>Boletos</span></router-link>
+								</li>
 
 							</ul>
 						</div>

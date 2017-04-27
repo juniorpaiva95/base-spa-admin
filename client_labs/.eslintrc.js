@@ -14,6 +14,9 @@ module.exports = {
   'rules': {
     'space-before-function-paren': 0,
     'no-undef': 0,
+    'indents': 0,
+    'no-tabs': 0,
+    
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
